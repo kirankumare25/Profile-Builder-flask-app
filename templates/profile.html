@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+   <link href="https://fonts.googleapis.com/css2?family=Acme&family=Creepster&family=Love+Light&family=Romanesco&family=Science+Gothic&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            width: 1080;
+            height:950px;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-image: linear-gradient(to bottom right, {{ color }} 0%, black 100%);
+            color: {{ color  }};
+            font-family: {{ font }};
+        }
+        #newsletter{
+            color: white;
+            font-size: 15px;
+            margin-top: 1px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: {{ color}};
+        }
+
+        img{
+            height: 300px;
+            width:300px;
+            object-fit: cover;
+            box-shadow: 0 0 20px rgba(49, 49, 49, 0.7);
+            border: 3px solid {{ color }};
+        
+        }
+    </style>
+
+</head>
+<body>
+    <img id="imagefile", src="{{url_for ('static', filename='uploads/' + in_image)}}">
+    <h2>Hello My Name is : {{ name }}</h2>
+    <ul>
+        {% for fact in facts %}
+            <li>{{ fact }}</li>
+        {% endfor %}
+    </ul>
+    <input type="text", placeholder="Enter Email">
+    <button id="newsletter">Join Newsletter</button>
+</body>
+</html>
+

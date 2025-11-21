@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Builder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Creepster&family=Love+Light&family=Romanesco&family=Science+Gothic&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <h2>Welcome To Profile Builder</h2>
+
+    <div class="form-class">
+        <form method="POST", action="/image", enctype="multipart/form-data" class="space-y-6">
+            <input type="file", name="files", required> <br>
+            <input type="text", placeholder="Enter Name", name="profile_name"><br>
+            <input type="text", placeholder="Facts About Me", name="facts"><br>
+            <label style="font-family: 'Science Gothic';font-size: 16px;">
+                <input type="radio", name="font_opt", value="Science Gothic">Sci-FI</input>
+            </label>
+            <label style="font-family: 'Acme';font-size: 16px;">
+                <input type="radio", name="font_opt", value="Acme">Action</input>
+            </label>
+            <label style="font-family: 'Romanesco';font-size: 22px;">
+                <input type="radio", name="font_opt", value="Romanesco">Romance</input>
+            </label>
+            <label style="font-family: 'Love Light', Times, serif ;font-size: 22px;">
+                <input type="radio", name="font_opt", value="Love Light">Fantasy</input>
+            </label>
+            <label style="font-family:'Creepster'; font-size: 16px;">
+                <input type="radio", name="font_opt", value="Creepster">Horror</input>
+            </label><br>
+            
+            
+            <div class="color-options">
+
+            <label for="favcolor">Select your favorite color:</label>
+            <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+
+            </div>
+            <button id="submit">Submit</button>
+            
+        </form>
+    </div>
+
+   
+
+</body>
+</html>

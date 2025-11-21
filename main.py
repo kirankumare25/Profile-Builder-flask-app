@@ -1,7 +1,5 @@
 import os
-from flask import Flask, render_template, request, url_for
-from werkzeug.utils import secure_filename
-
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
